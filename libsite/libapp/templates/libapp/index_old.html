@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if itemlist %}
+        <h2>List of Library items</h2>
+        <ol>
+            {% for item in itemlist %}
+                <li> <a href="{% url 'libapp:detail' item.id %}">{{ item}} </a></li>
+            {% endfor %}
+        </ol>
+
+    {% else %}
+        <strong>There are no available items!</strong>
+    {% endif %}
+
+    <p><a href="{% url 'libapp:about' %}">About page</a></p>
+</body>
+</html>

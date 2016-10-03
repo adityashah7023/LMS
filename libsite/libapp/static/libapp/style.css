@@ -1,0 +1,129 @@
+html{
+    background: url("bg-image.jpg") no-repeat fixed center;
+    background-size: 100%;
+}
+body{
+    width: 80%;
+    height: auto;
+    position: absolute;
+    left: 10%;
+    border: solid 10px white;
+    background-color: ghostwhite;
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-decoration-color: midnightblue;
+
+}
+.content {
+
+    min-height: 430px;
+
+}
+.panel-title{
+    padding: 10px;
+}
+ol{
+            -webkit-margin-before: 0em;
+}
+.col-md-12{
+    padding-left: 20px;
+    width: 100%;
+    position: relative;
+}
+.col-md-6{
+    width: 47%;
+    padding: 15px;
+    float: left;
+}
+.col-md-1{
+    width: 8.33%;
+    float: left;
+        position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-4{
+    width:33.33%;
+    float: left;
+        position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.panel-body{
+    padding-top: -10px;
+}
+.nav ul {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    max-height: 45px;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    background-color: #111;
+}
+
+h1{
+    font-size: 32px;
+    font-style: normal;
+    color: crimson;
+    text-align: center;
+}
+.hbar1 {
+    display: inline;
+}
+.user{
+    position: absolute;
+    text-align: right;
+    left: 90%;
+    top:-3%
+
+}
+.item-header{
+    font-size: 1.17em;
+    font-weight:bold;
+    background-color: #999999;
+    min-height: 30px;
+    text-align: center;
+
+}
+.item-body{
+    font-size: 1em;
+    font-style: italic;
+    border: 1px solid #999999;
+}
+.button{
+    border: 1px black solid;
+    padding: 10px;
+    background-color: #F4F4F4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-decoration: none;
+}
+.button a:hover{
+
+    background-color: #fbf7f7;
+}

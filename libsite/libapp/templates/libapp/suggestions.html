@@ -1,0 +1,53 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Suggestions
+{% endblock %}
+{% block body_block %}
+
+    <div class="container-fluid">
+        <div class="row h2">
+            List of Suggested items
+            <span style="float: right"><a href="{% url 'libapp:newitem' %}" class="btn btn-success">New Item</a></span>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary col-sm-5 ">
+                <div class="panel-heading">
+                    Books
+                </div>
+                <div class="panel-body">
+                    {% if itemlist %}
+                    <ol>
+                        {% for item in itemlist %}
+                            {% if item.get_type_display == "Book" %}
+                                <li><a href="/libapp/suggestion/{{ item.id }}">{{ item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="panel panel-primary col-sm-5 col-sm-offset-2">
+                <div class="panel-heading">
+                    DVDs
+                </div>
+                <div class="panel-body">
+                    {% if itemlist %}
+                    <ol>
+                        {% for item in itemlist %}
+                            {% if item.get_type_display == "DVD" %}
+                                <li><a href="/libapp/suggestion/{{ item.id }}">{{ item.title}}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

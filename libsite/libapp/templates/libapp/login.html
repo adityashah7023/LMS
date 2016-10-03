@@ -1,0 +1,31 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Login
+{% endblock %}
+{% block body_block %}
+    <div class="container-fluid">
+        {% if msg != '' %}
+        <div class="alert alert-danger alert-dismissable">
+            {{ msg }}
+        </div>
+        {% endif %}
+        <fieldset style="padding-top: 20px;position: relative;top: 10px">
+            <legend>Welcome</legend>
+            <form action="{% url 'libapp:login' %}" method="post">
+                {% csrf_token %}
+
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </div>
+
+                    <div class="form-group">
+
+                            <input type="submit" value="Login" class="btn btn-danger">
+                            <a href="{% url 'libapp:forgot' %}" class="btn btn-warning">Forgot password</a>
+
+                    </div>
+
+            </form>
+        </fieldset>
+    </div>
+{% endblock %}

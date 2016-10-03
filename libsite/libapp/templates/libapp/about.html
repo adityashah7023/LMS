@@ -1,0 +1,18 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    About
+{% endblock %}
+{% block body_block %}
+    <div class="container-fluid">
+        <div class="row">
+            <h2>This is a Library APP.</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-3"></div>
+
+            <div class="col-md-6"><span class="badge bg-primary"> Visits : {{ about_visits }}</span></div>
+        </div>
+
+    </div>
+{% endblock %}

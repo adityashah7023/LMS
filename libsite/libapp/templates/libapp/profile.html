@@ -1,0 +1,89 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Details
+{% endblock %}
+{% block body_block %}
+    <div class="container-fluid">
+        <div class="row h2">
+            Profile
+           <!-- <span style="float: right"><a href="#" class="btn btn-success" id="btn-edit">Edit</a></span>-->
+        </div>
+        <div class="row" id="frm-info">
+            <div class="panel panel-primary col-sm-12 ">
+                <div class="panel-body">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-3"> Name : </div>
+                            <div class="col-md-3"> {{ profile.first_name }} {{ profile.last_name }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Username : </div>
+                            <div class="col-md-3">{{ profile.username }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Email : </div>
+                            <div class="col-md-3">{{ profile.email }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Phone : </div>
+                            <div class="col-md-3">{{ profile.phone }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Address : </div>
+                            <div class="col-md-3">{{ profile.address }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> City : </div>
+                            <div class="col-md-3">{{ profile.city }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Province : </div>
+                            <div class="col-md-3">{{ profile.province }} </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3"> Postal code : </div>
+                            <div class="col-md-3">{{ profile.postalcode }} </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        {% load staticfiles %}
+                            <img src="{% static 'libapp/user.png' %}" class="img-circle" style="min-height: 150px;min-width: 150px;max-height: 150px;max-width: 150px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="frm_edit">
+        <div class="panel panel-primary col-md-6 col-md-offset-3">
+            <div class="panel-heading">
+                Edit Profile
+            </div>
+            <div class="panel-body">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Update" class="btn btn-success">
+                    <a href="#" class="btn btn-danger" id="btn-cancel">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $("#frm_edit").hide();
+        $("#frm-info").show();
+        $("#btn-edit").click(function(){
+            $("#frm_edit").show();
+            $("#frm-info").hide();
+            $("#btn-edit").hide();
+        });
+        $("#btn-cancel").click(function(){
+            $("#frm_edit").hide();
+            $("#frm-info").show();
+            $("#btn-edit").show();
+        });
+    });
+    </script>
+{% endblock %}

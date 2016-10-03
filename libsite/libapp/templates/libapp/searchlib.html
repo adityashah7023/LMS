@@ -1,0 +1,61 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Suggestions
+{% endblock %}
+{% block body_block %}
+    <div class="container-fluid">
+        <div class="panel panel-danger col-md-12">
+            <div class="panel-heading">Search</div>
+            <div class="panel-body">
+                <form action="(% url 'libapp:searchlib %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input class="btn btn-success" type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+        <div class="row h2">
+            List of Searched items
+        </div>
+        <div class="row">
+            <div class="panel panel-primary col-sm-5 ">
+                <div class="panel-heading">
+                    Books
+                </div>
+                <div class="panel-body">
+                    {% if booklist %}
+                    <ol>
+                        {% for item in booklist %}
+                            {% if item.itemtype == "Book" %}
+                                <li> <a href="{% url 'libapp:detail' item.id %}">{{ item.title}} </a> <br/> Author : {{ item.author }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="panel panel-primary col-sm-5 col-sm-offset-2">
+                <div class="panel-heading">
+                    DVDs
+                </div>
+                <div class="panel-body">
+                    {% if dvdlist %}
+                    <ol>
+                        {% for item in dvdlist %}
+                            {% if item.itemtype == "DVD" %}
+                            <li> <a href="{% url 'libapp:detail' item.id %}">{{ item.title}} </a> <br/> Maker : {{ item.maker }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

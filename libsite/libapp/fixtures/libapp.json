@@ -1,0 +1,349 @@
+[
+{
+  "model": "libapp.libuser",
+  "pk": 2,
+  "fields": {
+    "address": "",
+    "city": "Windsor",
+    "postalcode": "",
+    "province": "ON",
+    "phone": 5197920001,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 3,
+  "fields": {
+    "address": "123, Sunset Ave",
+    "city": "Montreal",
+    "postalcode": "N9B 1C9",
+    "province": "QC",
+    "phone": 5192260002,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 4,
+  "fields": {
+    "address": "439, Randolph Ave",
+    "city": "Windsor",
+    "postalcode": "N9B 2S9",
+    "province": "ON",
+    "phone": 5197920003,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 5,
+  "fields": {
+    "address": "",
+    "city": "Windsor",
+    "postalcode": "",
+    "province": "ON",
+    "phone": 5197920004,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 13,
+  "fields": {
+    "address": "439, Bridge Ave",
+    "city": "Windsor",
+    "postalcode": "N9B 2M3",
+    "province": "ON",
+    "phone": 5197920120,
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 18,
+  "fields": {
+    "address": "",
+    "city": "Windsor",
+    "postalcode": "",
+    "province": "ON",
+    "phone": null,
+    "profile_image": "photos/user.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 19,
+  "fields": {
+    "address": "",
+    "city": "Windsor",
+    "postalcode": "",
+    "province": "ON",
+    "phone": null,
+    "profile_image": "photos/user.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libuser",
+  "pk": 20,
+  "fields": {
+    "address": "510, Randolph Ave",
+    "city": "Windsor",
+    "postalcode": "N9B 2Y4",
+    "province": "ON",
+    "phone": null,
+    "profile_image": "photos/user.png",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 1,
+  "fields": {
+    "title": "Advanced Optical Networks",
+    "itemtype": "Book",
+    "checked_out": false,
+    "user": null,
+    "duedate": null,
+    "last_chkout": null,
+    "num_chkout": 0,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2007
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 2,
+  "fields": {
+    "title": "Wireless Networks",
+    "itemtype": "Book",
+    "checked_out": false,
+    "user": null,
+    "duedate": null,
+    "last_chkout": null,
+    "num_chkout": 0,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2005
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 3,
+  "fields": {
+    "title": "The New World",
+    "itemtype": "Book",
+    "checked_out": false,
+    "user": null,
+    "duedate": null,
+    "last_chkout": null,
+    "num_chkout": 0,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2012
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 4,
+  "fields": {
+    "title": "Python Programming",
+    "itemtype": "Book",
+    "checked_out": true,
+    "user": 3,
+    "duedate": "2016-05-31",
+    "last_chkout": null,
+    "num_chkout": 1,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2006
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 5,
+  "fields": {
+    "title": "A Good Story",
+    "itemtype": "Book",
+    "checked_out": true,
+    "user": 2,
+    "duedate": "2016-06-21",
+    "last_chkout": null,
+    "num_chkout": 1,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2003
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 6,
+  "fields": {
+    "title": "A New Adventure",
+    "itemtype": "DVD",
+    "checked_out": false,
+    "user": null,
+    "duedate": null,
+    "last_chkout": null,
+    "num_chkout": 0,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2012
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 7,
+  "fields": {
+    "title": "Funny Movie",
+    "itemtype": "DVD",
+    "checked_out": true,
+    "user": 4,
+    "duedate": "2016-06-14",
+    "last_chkout": null,
+    "num_chkout": 1,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2005
+  }
+},
+{
+  "model": "libapp.libitem",
+  "pk": 8,
+  "fields": {
+    "title": "The Big Mystery",
+    "itemtype": "DVD",
+    "checked_out": true,
+    "user": 3,
+    "duedate": "2016-06-14",
+    "last_chkout": null,
+    "num_chkout": 1,
+    "date_acquired": "2016-05-17",
+    "pubyr": 2009
+  }
+},
+{
+  "model": "libapp.book",
+  "pk": 1,
+  "fields": {
+    "author": "John Smith",
+    "category": 4
+  }
+},
+{
+  "model": "libapp.book",
+  "pk": 2,
+  "fields": {
+    "author": "Mary Hall",
+    "category": 4
+  }
+},
+{
+  "model": "libapp.book",
+  "pk": 3,
+  "fields": {
+    "author": "John King",
+    "category": 1
+  }
+},
+{
+  "model": "libapp.book",
+  "pk": 4,
+  "fields": {
+    "author": "Alan Jones",
+    "category": 4
+  }
+},
+{
+  "model": "libapp.book",
+  "pk": 5,
+  "fields": {
+    "author": "Mary Hall",
+    "category": 1
+  }
+},
+{
+  "model": "libapp.dvd",
+  "pk": 6,
+  "fields": {
+    "maker": "Sony",
+    "duration": 115,
+    "rating": 1
+  }
+},
+{
+  "model": "libapp.dvd",
+  "pk": 7,
+  "fields": {
+    "maker": "Pixar",
+    "duration": 50,
+    "rating": 4
+  }
+},
+{
+  "model": "libapp.dvd",
+  "pk": 8,
+  "fields": {
+    "maker": "Sony",
+    "duration": 32,
+    "rating": 1
+  }
+},
+{
+  "model": "libapp.suggestion",
+  "pk": 3,
+  "fields": {
+    "title": "book1",
+    "pubyr": 2012,
+    "type": 1,
+    "cost": 50,
+    "num_interested": 1,
+    "comments": "This is a book"
+  }
+},
+{
+  "model": "libapp.suggestion",
+  "pk": 4,
+  "fields": {
+    "title": "dvd 1",
+    "pubyr": 1995,
+    "type": 2,
+    "cost": 30,
+    "num_interested": 1,
+    "comments": "Dvd 1 is amazing."
+  }
+},
+{
+  "model": "libapp.suggestion",
+  "pk": 5,
+  "fields": {
+    "title": "book2",
+    "pubyr": 2002,
+    "type": 1,
+    "cost": 10,
+    "num_interested": 1,
+    "comments": "book2"
+  }
+},
+{
+  "model": "libapp.suggestion",
+  "pk": 6,
+  "fields": {
+    "title": "dvd 2",
+    "pubyr": 2012,
+    "type": 2,
+    "cost": 50,
+    "num_interested": 1,
+    "comments": ""
+  }
+}
+]

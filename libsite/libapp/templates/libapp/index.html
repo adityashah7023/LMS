@@ -1,0 +1,62 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Home
+{% endblock %}
+{% block body_block %}
+
+    <div class="row bg-info float-right">
+        <div class="col-lg-9"></div>
+        <div class="col-lg-3">
+            Lucky Number :
+            {% if request.session.lucky_num %}
+            {{ request.session.lucky_num }}
+            {% else %} 0
+            {% endif %}
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <h2>List of Library items</h2>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary col-sm-5 ">
+                <div class="panel-heading">
+                    Books
+                </div>
+                <div class="panel-body">
+                    {% if itemlist %}
+                    <ol>
+                        {% for item in itemlist %}
+                            {% if item.itemtype == "Book" %}
+                                <li> <a href="{% url 'libapp:detail' item.id %}">{{ item.title}} </a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="panel panel-primary col-sm-5 col-sm-offset-2">
+                <div class="panel-heading">
+                    DVDs
+                </div>
+                <div class="panel-body">
+                    {% if itemlist %}
+                    <ol>
+                        {% for item in itemlist %}
+                            {% if item.itemtype == "DVD" %}
+                            <li> <a href="{% url 'libapp:detail' item.id %}">{{ item.title}} </a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
+
+                    {% else %}
+                        <strong>There are no available items!</strong>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

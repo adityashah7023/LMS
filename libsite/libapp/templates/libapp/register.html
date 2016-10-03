@@ -1,0 +1,22 @@
+{% extends 'libapp/base.html' %}
+{% block title %}
+    Register
+{% endblock %}
+{% block body_block %}
+    <div class="container-fluid">
+        <div class="row h2">
+            Register Now.
+        </div>
+        <div class="row">
+            <div class="panel panel-primary col-sm-5 ">
+                <div class="panel-body">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input class="btn btn-success" type="submit" value="Register Me">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
